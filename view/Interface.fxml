@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="415.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerTela">
+   <children>
+      <ImageView fitHeight="415.0" fitWidth="755.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/sushi-rodizio-cenario.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_Produtor" fitHeight="238.0" fitWidth="64.0" layoutX="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/produtor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="312271.0" fitWidth="755.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/sushi-rodiziocenario2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_ButtonPlay" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="50.0" layoutX="350.0" layoutY="372.0" onMouseClicked="#buttonIniciar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/button-play.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_ButtonPlayInative" fitHeight="44.0" fitWidth="50.0" layoutX="350.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/button-play-inative.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_ButtonRestart" fitHeight="44.0" fitWidth="50.0" layoutX="418.0" layoutY="371.0" onMouseClicked="#buttonRestart" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/button-restart.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_ButtonRestartInative" fitHeight="44.0" fitWidth="50.0" layoutX="418.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/button-restart-inative.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="50.0" layoutX="454.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/button-pause.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="37.0" layoutX="31.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/music.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="checkBox_Music" layoutX="10.0" layoutY="383.0" mnemonicParsing="false" onAction="#checkBoxPause" prefHeight="10.0" prefWidth="13.0" />
+      <Slider fx:id="slider_Produtor" layoutX="328.0" layoutY="272.0" max="9.0" onMouseDragged="#controleSliders" prefHeight="10.0" prefWidth="175.0" />
+      <Slider fx:id="slider_Consumidor" layoutX="328.0" layoutY="322.0" onMouseDragged="#controleSliders" prefHeight="10.0" prefWidth="175.0" />
+      <Label fx:id="label_Produtor" alignment="CENTER" contentDisplay="CENTER" layoutX="328.0" layoutY="283.0" onMouseDragged="#controleSliders" prefHeight="15.0" prefWidth="171.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_Consumidor" alignment="CENTER" contentDisplay="CENTER" layoutX="328.0" layoutY="335.0" prefHeight="15.0" prefWidth="171.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <HBox fx:id="HBOX_Sushis" layoutX="239.0" layoutY="162.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="38.0" prefWidth="349.0" />
+      <ProgressBar fx:id="progressBar_Cozinhando" layoutX="233.0" layoutY="5.0" opacity="0.7" prefHeight="14.0" prefWidth="133.0" progress="0.0" />
+      <ProgressBar fx:id="progressBar_Comendo" layoutX="479.0" layoutY="208.0" opacity="0.7" prefHeight="14.0" prefWidth="133.0" progress="0.0" />
+      <Label fx:id="labelPorcentagem_Cozinhando" alignment="CENTER" layoutX="375.0" layoutY="1.0" prefHeight="20.0" prefWidth="37.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPorcentagem_Comendo" alignment="CENTER" layoutX="497.0" layoutY="222.0" prefHeight="20.0" prefWidth="97.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="prato" layoutX="576.0" layoutY="156.0" prefHeight="44.0" prefWidth="49.0" />
+      <ImageView fx:id="imgView_pauseC" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="33.0" layoutX="499.0" layoutY="317.0" onMouseClicked="#buttonPausedC" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/pause-c.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_playC" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="33.0" layoutX="499.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/play-c.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_pauseP" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="33.0" layoutX="500.0" layoutY="266.0" onMouseClicked="#buttonPausedP" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/pause-p.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgView_playP" accessibleRole="BUTTON" fitHeight="35.0" fitWidth="33.0" layoutX="500.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@img/play-p.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
